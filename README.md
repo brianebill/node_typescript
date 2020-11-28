@@ -13,16 +13,18 @@ Add the typescript config:
 ```json
 {
   "compilerOptions": {
-    "target": "es5",                          
+    "types": ["node"],
+    "target": "ES2018",                          
     "module": "commonjs",                    
-    "lib": ["es6"],                     
-    "allowJs": true,
-    "outDir": "build",                          
-    "rootDir": "src",
-    "strict": true,         
-    "noImplicitAny": true,
+    "lib": ["es5"],                     
+    "allowJs": true,                         
+    "strict": false,
+    "outDir": "build",
+    "moduleResolution": "node",
     "esModuleInterop": true,
-    "resolveJsonModule": true
+    "rootDir": ".",
+    "noEmitOnError": true,
+    "baseUrl": "./src",
   }
 }
 ```
@@ -40,16 +42,6 @@ Add the typescript config:
 0. `yarn add -D nodemon ts-node`
 0. `vim nodemon.json`
 
-Add nodemon config:
-```json
-{
-  "watch": ["src"],
-  "ext": ".ts,.js",
-  "ignore": [],
-  "exec": "ts-node ./src/index.ts"
-}
-```
-
 # Add build script:
 0. `yarn add -D rimraf`
 0. `vim package.json`
@@ -57,8 +49,9 @@ Add nodemon config:
 Add the build and start scripts:
 ```json
 {
+  "d": "nodemon src/index.ts",
   "build": "rimraf ./build && tsc",
-  "start": "npm run build && node build/index.js"
+  "start": "yarn run build && nodemon build/src/index.js"
 }
 ```
 # Add linter
@@ -102,6 +95,7 @@ Enter the files to ignore:
 ```
 node_modules
 dist
+build
 ```
 
 # Add a script to lint files:

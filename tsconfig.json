@@ -11,6 +11,9 @@
     "esModuleInterop": true,
     "rootDir": ".",
     "noEmitOnError": true,
-    "baseUrl": "./api",
+    "baseUrl": "./src",
+    "paths": {
+      "services/*": ["services/*"]
+    }
   }
 }
