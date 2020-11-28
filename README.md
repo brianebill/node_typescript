@@ -1,4 +1,11 @@
-# Web Scraping with Puppeteer
+# Node with Typescript Starter Project
+
+This repo can be cloned and used under the MIT license terms. It includes some helpful packages:
+- `babel` to enable ESM to access the latest javascript import and export syntax
+- `module-alias` to allow aliasing of project folders for easy access
+- `eslint` to call out any defects before they get committed
+- `prettier` to encourage consistency in the codebase
+- `husky` to lint prior to making commits to avoid multiple round trips to github to correct overlooked items
 
 ## Setup
 
