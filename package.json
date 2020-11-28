@@ -20,6 +20,9 @@
     "lint": "eslint . --ext .ts",
     "nodemon": "nodemon"
   },
+  "dependencies": {
+    "module-alias": "^2.2.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
@@ -30,6 +33,7 @@
     "eslint": "^7.14.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
     "lint-staged": "^10.5.2",
     "nodemon": "^2.0.6",
     "prettier": "^2.2.0",
@@ -39,8 +43,5 @@
   },
   "_moduleAliases": {
     "services": "src/services"
-  },
-  "dependencies": {
-    "module-alias": "^2.2.2"
   }
 }
